@@ -1,0 +1,34 @@
+body {
+  margin: 2% auto auto auto;
+  width: 60%;
+  background-color: #19181B;
+  color: white;
+}
+
+.description {
+  margin: 3% 0% 3% 0%;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 2% auto;
+  padding: 2% 1% 1% 1%;
+  background-color: #009838;
+  font-size: 170%;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: auto;
+}
+
+.author {
+  color: white;
+}
+
+.tweet {
+  float: right;
+}
+
+footer {
+  padding: 2%;
+  font-size: 130%;
+}

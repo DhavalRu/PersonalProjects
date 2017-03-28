@@ -1,0 +1,105 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+body {
+  margin: 2% auto auto auto;
+  background-color: #675FFF;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 0;
+  color: white;
+}
+
+#calc {
+  width: 300px;
+  height: 530px;
+  margin: 1% auto;
+  background-color: #1B1B1B;
+  border: 1px solid #1B1B1B;
+  border-radius: 5%;
+  padding: 10px 20px;
+  -webkit-box-shadow: 5px 5px 5px 5px #260F14;
+  box-shadow: 5px 5px 5px 5px #260F14;
+}
+
+.btn {
+  width: 61px;
+  height: 60px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 150%;
+  -webkit-box-shadow: 1px 2px 2px 2px gray;
+  box-shadow: 1px 2px 2px 2px gray;
+}
+
+.btn:active, .btn:visited {
+  box-shadow: none;
+}
+
+.btn-danger {
+  -webkit-box-shadow: 1px 2px 2px 2px #d9534f;
+  box-shadow: 1px 2px 2px 2px #d9534f;
+}
+
+.btn-primary {
+  -webkit-box-shadow: 1px 2px 2px 2px #337ab7;
+  box-shadow: 1px 2px 2px 2px #337ab7;
+}
+
+#equals {
+  position: absolute;
+  height: 125px;
+  margin-left: 4px;
+}
+
+
+/* Fix Chrome equals button position */
+@media (-webkit-min-device-pixel-ratio:0) {
+  #equals {
+    margin-left: 0px;
+  }
+}
+
+/* Fix IE 8, 9, 10 equals button position */
+@media screen\0 {
+  #equals {
+    margin-left: 194px;
+    margin-top: -65px;
+  }
+}
+
+#zero {
+  width: 125px;
+}
+
+#resultdiv {
+  background-color: gray;
+  border: 1px solid black;
+  margin-bottom: 3%;
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-shadow: 3px 3px 4px 1px #1a1a1a inset;
+  box-shadow: 3px 3px 4px 1px #1a1a1a inset;
+}
+
+#result {
+  font-size: 180%;
+  padding: 10px 6px;
+  overflow: auto;
+  margin-bottom: 0;
+  color: black;
+}
+
+#log {
+  font-size: 120%;
+  padding: 5px 6px;
+  overflow: auto;
+}
+
+footer {
+  margin-top: 1%;
+  font-size: 150%;
+}
+footer a, a:hover, a:focus, a:visited, a:link, a:active {
+  color: black;
+  outline: 0;
+}

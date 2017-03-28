@@ -1,0 +1,69 @@
+body {
+  margin: 2% auto auto auto;
+  width: 80%;
+  background-color: #19181B;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 2%;
+}
+
+h2 {
+  color: black;
+  margin-top: 0;
+}
+
+li {
+  margin-top: 0;
+  word-wrap: break-word;
+}
+
+input {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 80%;
+  font-size: 150%;
+  border-radius: 10%;
+  color: black;
+  padding: 1%;
+}
+
+#submitbutton {
+  width: 30%;
+  font-size: 150%;
+  margin-bottom: 2%;
+}
+
+/* Maximize submit button for smaller screens*/
+@media (max-width: 480px) {
+    #submitbutton {
+      width: 100%;
+      font-size: 150%;
+      margin-bottom: 2%;
+  }
+}
+.btn-default {
+  margin-bottom: 1%;
+}
+
+.btn {
+  /* So there's no overflow */
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+#results li {
+  /*Have to do this because firefox adds annoying margin-top for list */
+  display: inline-block;
+  width: 100%;
+}
+
+footer {
+  margin-top: 1%;
+  font-size: 150%;
+}
+
+a, a:hover, a:focus, a:visited, a:link, a:active {
+  text-decoration: none;
+}

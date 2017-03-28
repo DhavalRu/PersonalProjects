@@ -1,0 +1,132 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+body {
+  background-color: #19181B;
+}
+
+.board {
+  margin: 2% auto;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.main-button {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin: 10px;
+  top: 20px;
+  border: 1px solid black;
+}
+
+#center {
+  background-color: white;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  top: -335px;
+  border: 20px solid black;
+  border-radius: 50%;
+}
+
+h1{
+  font-family: 'Lobster', cursive;
+  font-size: 300%;
+}
+
+#green {
+  border-radius: 100% 0px 0px 0px;
+}
+#red {
+  border-radius: 0px 100% 0px 0px;
+}
+#yellow {
+  border-radius: 0px 0px 0px 100%;
+}
+#blue {
+  border-radius: 0px 0px 100% 0px;
+}
+
+#counter {
+  background-color: #32050C;
+  color: #DC0D29;
+  font-size: 200%;
+  width: 150px;
+  margin: 10px auto;
+  border-radius: 10%;
+  border: 1px solid black;
+  font-family: 'Oswald', sans-serif;
+}
+
+.center-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 1px #260F14;
+  background-color: #F7E615;
+  margin-left: 1px;
+}
+
+.strictmode {
+  background-color: green;
+}
+
+.btn-success:focus {
+  background-color: #5cb85c;
+}
+.btn-warning:focus {
+  background-color: #f0ad4e;
+}
+.btn-danger:focus {
+  background-color: #d9534f;
+}
+.btn-primary:focus {
+  background-color: #337ab7;
+}
+
+@media (max-width: 500px) {
+  .board {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main-button {
+    width: 105px;
+    height: 105px;
+    margin: 5px;
+    top: 10px;
+  }
+
+  #center {
+    width: 140px;
+    height: 140px;
+    top: -175px;
+    border: 10px solid black;
+  }
+
+  h1{
+    font-size: 150%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #counter {
+    font-size: 100%;
+    width: 75px;
+    margin: 5px auto;
+    border-radius: 10%;
+  }
+
+  .center-button {
+    width: 5px;
+    height: 20px;
+  }
+  
+  span {
+    font-size: 80%;
+  }
+}

@@ -1,0 +1,48 @@
+body {
+  margin: 2% auto auto auto;
+  background-color: #40D0C0;
+  color: black;
+}
+
+h1 {
+  color: #072905;
+}
+
+input[type="radio"] {
+  padding: 20px;
+  margin-top: 13px;
+}
+
+span {
+  font-size: 200%;
+  padding: 10px;
+}
+
+.btn {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  .btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+#winner {
+  font-size: 200%;
+  color: #0F097F;
+}
+
+footer {
+  margin-top: 1%;
+  font-size: 150%;
+}
+footer a, a:hover, a:focus, a:visited, a:link, a:active {
+  color: black;
+}

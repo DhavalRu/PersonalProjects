@@ -1,0 +1,27 @@
+body {
+  margin: 2% auto auto auto;
+  background-color: white;
+  color: black;
+  background-size: 100%;
+  width: 70%;
+}
+
+p {
+  font-size: 150%;
+}
+
+h1 {
+  background-color: #009838;
+  margin-bottom: 3%;
+  border-radius: 10%;
+  padding: 2% 4%;
+}
+
+.btn {
+  margin-bottom: 2%;
+}
+
+a {
+  color: black;
+  font-size: 130%;
+}
