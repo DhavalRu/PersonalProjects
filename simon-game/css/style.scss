@@ -1,7 +1,8 @@
-@import "https://fonts.googleapis.com/css?family=Oswald";
+@import 'https://fonts.googleapis.com/css?family=Oswald';
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+$backColor: #19181B;
 body {
-  background-color: #19181B;
+  background-color: $backColor;
 }
 
 .board {
@@ -32,7 +33,7 @@ body {
   border-radius: 50%;
 }
 
-h1 {
+h1{
   font-family: 'Lobster', cursive;
   font-size: 300%;
 }
@@ -40,21 +41,18 @@ h1 {
 #green {
   border-radius: 100% 0px 0px 0px;
 }
-
 #red {
   border-radius: 0px 100% 0px 0px;
 }
-
 #yellow {
   border-radius: 0px 0px 0px 100%;
 }
-
 #blue {
   border-radius: 0px 0px 100% 0px;
 }
 
 #counter {
-  background-color: #4c040e;
+  background-color: darken(#DC0D29, 30%);
   color: #DC0D29;
   font-size: 200%;
   width: 150px;
@@ -81,15 +79,12 @@ h1 {
 .btn-success:focus {
   background-color: #5cb85c;
 }
-
 .btn-warning:focus {
   background-color: #f0ad4e;
 }
-
 .btn-danger:focus {
   background-color: #d9534f;
 }
-
 .btn-primary:focus {
   background-color: #337ab7;
 }
@@ -114,7 +109,7 @@ h1 {
     border: 10px solid black;
   }
 
-  h1 {
+  h1{
     font-size: 150%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -131,18 +126,17 @@ h1 {
     width: 5px;
     height: 20px;
   }
-
+  
   div span {
     font-size: 80%;
   }
 }
+
 footer {
   margin-top: 1%;
   font-size: 150%;
-  color: #7d7887;
+  color: lighten($backColor, 40%);
+  a, a:hover, a:focus, a:visited, a:link, a:active {
+    color: lighten($backColor, 40%);
+  }
 }
-footer a, footer a:hover, footer a:focus, footer a:visited, footer a:link, footer a:active {
-  color: #7d7887;
-}
-
-/*# sourceMappingURL=style.css.map */

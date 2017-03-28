@@ -11,12 +11,13 @@ body {
     width: 80%;
   }
 }
+
 p {
   font-size: 150%;
 }
 
 h1 {
-  background-color: #9fc4e4;
+  background-color: lighten(#337ab7, 30%);
   margin-bottom: 3%;
   opacity: 0.5;
   padding: 2% 4%;
@@ -32,8 +33,5 @@ a {
 }
 
 footer {
-  background-color: #9fc4e4;
-  opacity: 0.6;
+  background-color: lighten(#337ab7, 30%);
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -49,4 +49,10 @@ $(document).ready(function(){
     $(".btn-default").removeClass("displayNone");
     $(".btn-success, .disabled").addClass("displayNone");
   });
+
+  /* Copyright year */
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = document.getElementById("copyyear");
+  copyright.innerHTML = year;
 });

@@ -16,4 +16,10 @@ $(document).ready(function(){
       $('#results').append('<li>Sorry, we cannot load Wiki list.</li>');
     });
   });
+
+  /* Copyright year */
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = document.getElementById("copyyear");
+  copyright.innerHTML = year;
 });

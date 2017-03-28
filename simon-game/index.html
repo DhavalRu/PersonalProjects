@@ -1,52 +1,43 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simon game with 20 levels"/>
+    <meta http-equiv="author" content="Dhaval Rughani"/>
     <title>Simon game</title>
-    
-    
-    
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
+    <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
-
     <div class="container text-center">
-  <audio id="aud_green" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg"></audio>
-  <audio id="aud_red" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg"></audio>
-  <audio id="aud_yellow" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg"></audio>
-  <audio id="aud_blue" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg"></audio>
-  <audio id="aud_wrong" src="https://www.myinstants.com/media/sounds/engineer_no01.mp3" type="audio/mpeg"></audio>
-  <div class="board">
-    <button class="btn-success main-button" id="green" disabled="disabled"></button>
-    <button class="btn-danger main-button" id="red" disabled="disabled"></button>
-    <button class="btn-warning main-button" id="yellow" disabled="disabled"></button>
-    <button class="btn-primary main-button" id="blue" disabled="disabled"></button>
-    <div id="center">
-      <h1>Simon</h1>
-      <div id="counter">00</div>
-      <button id = "start" class="btn center-button"></button>
-      <button id = "reset" class="btn center-button"></button>
-      <button id = "strict" class="btn center-button"></button><br>
-      <span>Start</span>
-      <span>Reset</span>
-      <span>Strict</span>
+      <audio id="aud_green" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg"></audio>
+      <audio id="aud_red" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg"></audio>
+      <audio id="aud_yellow" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg"></audio>
+      <audio id="aud_blue" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg"></audio>
+      <audio id="aud_wrong" src="https://www.myinstants.com/media/sounds/engineer_no01.mp3" type="audio/mpeg"></audio>
+      <div class="board">
+        <button class="btn-success main-button" id="green" disabled="disabled"></button>
+        <button class="btn-danger main-button" id="red" disabled="disabled"></button>
+        <button class="btn-warning main-button" id="yellow" disabled="disabled"></button>
+        <button class="btn-primary main-button" id="blue" disabled="disabled"></button>
+        <div id="center">
+          <h1>Simon</h1>
+          <div id="counter">00</div>
+          <button id = "start" class="btn center-button"></button>
+          <button id = "reset" class="btn center-button"></button>
+          <button id = "strict" class="btn center-button"></button><br>
+          <span>Start</span>
+          <span>Reset</span>
+          <span>Strict</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    <footer class="text-center">
+      <a href="http://codepen.io/Prismatic/" target="_blank">Dhaval Rughani</a> &copy <span id="copyyear"></span>
+    </footer>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

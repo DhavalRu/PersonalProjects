@@ -1,4 +1,11 @@
-@import "https://fonts.googleapis.com/css?family=Oswald";
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+$calcBackground: #1B1B1B;
+
+@mixin box-shadow($valh, $valv, $valblur, $valspread, $col) {
+  -webkit-box-shadow: $valh $valv $valblur $valspread $col;
+  box-shadow: $valh $valv $valblur $valspread $col;
+}
+
 body {
   margin: 2% auto auto auto;
   background-color: #675FFF;
@@ -14,43 +21,39 @@ h2 {
   width: 300px;
   height: 520px;
   margin: 1% auto;
-  background-color: #1B1B1B;
+  background-color: $calcBackground;
   border-radius: 4%;
   padding: 10px 20px;
-  -webkit-box-shadow: 5px 5px 5px 5px #260F14;
-  box-shadow: 5px 5px 5px 5px #260F14;
+  @include box-shadow(5px, 5px, 5px, 5px, #260F14);
 }
 
 @media (max-width: 400px) {
   #containerID {
     padding: 0;
   }
-
   #calc {
     margin: 0;
   }
 }
+
 .btn {
   width: 61px;
   height: 60px;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 150%;
-  -webkit-box-shadow: 1px 2px 2px 2px gray;
-  box-shadow: 1px 2px 2px 2px gray;
-}
-.btn:active, .btn:visited {
-  box-shadow: none;
+  @include box-shadow(1px, 2px, 2px, 2px, gray);
+  &:active, &:visited {
+    box-shadow: none;
+  }
 }
 
 .btn-danger {
-  -webkit-box-shadow: 1px 2px 2px 2px #d9534f;
-  box-shadow: 1px 2px 2px 2px #d9534f;
+  @include box-shadow(1px, 2px, 2px, 2px, #d9534f);
 }
 
 .btn-primary {
-  -webkit-box-shadow: 1px 2px 2px 2px #337ab7;
-  box-shadow: 1px 2px 2px 2px #337ab7;
+  @include box-shadow(1px, 2px, 2px, 2px, #337ab7);
 }
 
 #equals {
@@ -60,11 +63,12 @@ h2 {
 }
 
 /* Fix Chrome equals button position */
-@media (-webkit-min-device-pixel-ratio: 0) {
+@media (-webkit-min-device-pixel-ratio:0) {
   #equals {
     margin-left: 0px;
   }
 }
+
 /* Fix IE 8, 9, 10 equals button position */
 @media screen\0 {
   #equals {
@@ -72,12 +76,13 @@ h2 {
     margin-top: -65px;
   }
 }
+
 #zero {
   width: 125px;
 }
 
 #resultdiv {
-  background-color: #686868;
+  background-color: lighten(#1B1B1B, 30%);
   border: 1px solid black;
   margin-bottom: 3%;
   font-family: 'Oswald', sans-serif;
@@ -103,10 +108,9 @@ footer {
   margin-top: 4%;
   font-size: 150%;
   color: black;
-}
-footer a, footer a:hover, footer a:focus, footer a:visited, footer a:link, footer a:active {
-  color: black;
-  outline: 0;
-}
 
-/*# sourceMappingURL=style.css.map */
+  a, a:hover, a:focus, a:visited, a:link, a:active {
+    color: black;
+    outline: 0;
+  }
+}

@@ -5,8 +5,6 @@ body {
 }
 
 h1 {
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 3%;
 }
 
@@ -55,9 +53,10 @@ footer {
   font-size: 150%;
 }
 
-p {
-  display: inline;
-  text-align: center;
+.update {
+  font-size: 150%;
+  color: red;
+  font-style: italic;
 }
 
 .nomargin {

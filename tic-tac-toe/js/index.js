@@ -35,20 +35,24 @@ $(document).ready(function() {
                     $("#sq" + i).text("");
                 }
                 else {
+                    $("#sq"+i).prop("disabled", true);
                     $("#sq" + i).text(board[i]);
                 }
             }
             var winner = checkWinner(board);
             if (winner === 1) {
                 $("#winner").text("Computer Wins");
+                disableButtons();
                 setTimeout(reset, 2000);
             }
             else if (winner === -1) {
                 $("#winner").text("You Win");
+                disableButtons();
                 setTimeout(reset, 2000);
             }
             else if (winner === 0) {
                 $("#winner").text("It's a draw");
+                disableButtons();
                 setTimeout(reset, 2000);
             }
             else {
@@ -64,9 +68,15 @@ $(document).ready(function() {
             $("#sq" + i).text("");
         }
         $("#winner").text("");
-      for (var j = 0; j < 9; j++) {
-        $("#sq"+j).prop("disabled", false);
-      }
+        for (var j = 0; j < 9; j++) {
+            $("#sq"+j).prop("disabled", false);
+        }     
+    }
+
+    function disableButtons() {
+        for (var j = 0; j < 9; j++) {
+            $("#sq"+j).prop("disabled", true);
+        }
     }
 
     function checkWinner(board) {
@@ -137,4 +147,10 @@ $(document).ready(function() {
             return [winner, board];
         }
     }
+
+  /* Copyright year */
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = document.getElementById("copyyear");
+  copyright.innerHTML = year;
 });

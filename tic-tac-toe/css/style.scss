@@ -1,6 +1,7 @@
+$backColor: #40D0C0;
 body {
   margin: 2% auto auto auto;
-  background-color: #40D0C0;
+  background-color: $backColor;
   color: black;
 }
 
@@ -37,17 +38,16 @@ p {
     height: 70px;
   }
 }
+
 #winner {
   font-size: 200%;
-  color: #d04050;
+  color: complement($backColor);
 }
 
 footer {
   margin-top: 1%;
   font-size: 150%;
+  a, a:hover, a:focus, a:visited, a:link, a:active {
+    color: black;
+  }
 }
-footer a, footer a:hover, footer a:focus, footer a:visited, footer a:link, footer a:active {
-  color: black;
-}
-
-/*# sourceMappingURL=style.css.map */

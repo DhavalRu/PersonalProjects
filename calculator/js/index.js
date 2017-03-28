@@ -24,7 +24,7 @@ $(document).ready(function(){
     }
     else if (curr === "+") {
       decimal = true;
-            if (result[result.length-1] === "+") {
+      if (result[result.length-1] === "+") {
         //Do nothing    
       }
       //Overwrite to current operator if there is a previous operator just before
@@ -42,9 +42,9 @@ $(document).ready(function(){
         $("#log").text(log);
         $("#result").text(result);
       }
-            if (result[0] === "+" || result[0] === "-" || result[0] === "*" || result[0] === "/") {
+      if (result[0] === "+" || result[0] === "-" || result[0] === "*" || result[0] === "/") {
         result = "0" + result;
-              log = "0" + log;
+        log = "0" + log;
       }
       result = eval(result.slice(0,-1)).toString() + "+";
       $("#log").text(log);
@@ -52,7 +52,7 @@ $(document).ready(function(){
     }
     else if (curr === "-") {
       decimal = true;
-            if (result[result.length-1] === "-") {
+      if (result[result.length-1] === "-") {
         //Do nothing 
       }
       else if (result[result.length-1] === "/" || result[result.length-1] === "+" || result[result.length-1] === "*") {
@@ -106,7 +106,7 @@ $(document).ready(function(){
     }
     else if (curr === "\u00f7") {
       decimal = true;
-            if (result[result.length-1] === "/") {
+      if (result[result.length-1] === "/") {
         //Do nothing 
       }
       else if (result[result.length-1] === "*" || result[result.length-1] === "+" || result[result.length-1] === "-") {
@@ -193,4 +193,10 @@ $(document).ready(function(){
       $("#result").text(result);
     }
   });
+
+  /* Copyright year */
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = document.getElementById("copyyear");
+  copyright.innerHTML = year;
 });

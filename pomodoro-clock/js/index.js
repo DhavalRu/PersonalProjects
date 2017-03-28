@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var breaklength = parseInt($("#breaklength").text());
-  var sessionlength =  parseInt($("#sessionlength").text());
-    var clocktime =  parseInt($("#clocktime").text());
+  var sessionlength = parseInt($("#sessionlength").text());
+  var clocktime = parseInt($("#clocktime").text());
   var seconds = 0;
   var minutes = clocktime;
   var countdown;
@@ -19,6 +19,7 @@ $(document).ready(function(){
     }
     $("#breaklength").text(breaklength);
   });
+
   $("#breakplus").click(function() {
       breaklength += 1;
     $("#breaklength").text(breaklength);
@@ -33,6 +34,7 @@ $(document).ready(function(){
     $("#sessionlength").text(sessionlength);
     $("#clocktime").text(clocktime+":00");
   });
+
   $("#sessionplus").click(function() {
     sessionlength += 1;
     clocktime += 1;
@@ -40,6 +42,7 @@ $(document).ready(function(){
     $("#sessionlength").text(sessionlength);
     $("#clocktime").text(clocktime+":00");
   });
+
   $("#sessionminus5").click(function() {
     if (sessionlength > 5) {
       sessionlength -= 5;
@@ -53,6 +56,7 @@ $(document).ready(function(){
     $("#sessionlength").text(sessionlength);
     $("#clocktime").text(clocktime+":00");
   });
+  
   $("#sessionplus5").click(function() {
     sessionlength += 5;
     clocktime += 5;
@@ -69,19 +73,19 @@ $(document).ready(function(){
     sim = setInterval(progressSim, 1000*sessionlength);
   });
     
-    function progressSim(){
-      diff = ((percent / 60) * Math.PI*2);
-      ctx.lineWidth = 298;
-      if ($("#status").text() == "Session") {
-        ctx.strokeStyle = "#5cb85c";
-      }
-      else if ($("#status").text() == "Break") {
-        ctx.strokeStyle = "#d9534f";
-      }
-      ctx.beginPath();
-      ctx.arc(150, 150, 150, start, diff+start, false);
-      ctx.stroke();
-      percent++;
+  function progressSim(){
+    diff = ((percent / 60) * Math.PI*2);
+    ctx.lineWidth = 298;
+    if ($("#status").text() == "Session") {
+      ctx.strokeStyle = "#5cb85c";
+    }
+    else if ($("#status").text() == "Break") {
+      ctx.strokeStyle = "#d9534f";
+    }
+    ctx.beginPath();
+    ctx.arc(150, 150, 150, start, diff+start, false);
+    ctx.stroke();
+    percent++;
   }
   
   function tick() {
@@ -106,7 +110,7 @@ $(document).ready(function(){
       $("#aud")[0].play();
     }
     else {
-        if (seconds == 0) {
+      if (seconds == 0) {
           seconds = 60;
           minutes -= 1;
       }
@@ -141,4 +145,10 @@ $(document).ready(function(){
     $("#clocktime").text(clocktime+":00");
     $("#status").text("Session");
   });
+
+  /* Copyright year */
+  var today = new Date();
+  var year = today.getFullYear();
+  var copyright = document.getElementById("copyyear");
+  copyright.innerHTML = year;
 });
